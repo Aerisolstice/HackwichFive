@@ -10,14 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBAction func myGuessButtonPressed(_ sender: Any) {
-        let alert = UIAlertController(title: "Hello World!", message: "This is my first alert view.", preferredStyle: .alert)
-        let action = UIAlertAction (title: "Awesome", style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-    //It's funny because errors and warnings keep popping up all over the place until I typed out everything
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +17,12 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func myGuessButtonPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "Hello World!", message: "This is my first alert view.", preferredStyle: .alert)
+        let action = UIAlertAction (title: "Awesome", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        //It's funny because errors and warnings keep popping up all over the place until I typed out everything
+    }
 }
 

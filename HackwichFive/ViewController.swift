@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
+//I finally got this part to work!!
+        
     }
     
     //@IBAction func myGuessButtonPressed(_ sender: Any) {

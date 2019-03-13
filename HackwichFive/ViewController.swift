@@ -24,11 +24,14 @@ class ViewController: UIViewController {
 
     @IBAction func sliderHasMoved(_ sender: UISlider) {
         print("The value of the slider is: \(guessingSlider.value)")
-        
+        currentValue = lroundf(guessingSlider.value)
     }
     
     @IBAction func myGuessActionPressed(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Hello World!", message: "This is my first alert view", preferredStyle: .alert)
+        
+        let message = "The value is: \(currentValue)."
+        
+        let alert = UIAlertController(title: "Hello World!", message: message, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
         

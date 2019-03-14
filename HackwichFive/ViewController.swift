@@ -28,15 +28,10 @@ class ViewController: UIViewController {
         currentValue = lroundf(guessingSlider.value)
         
         startNewRound()
+
     }
     
-    func startNewRound () {
-        targetValue = 1 + Int(arc4random_uniform(100))
-        currentValue = 50
-        guessingSlider.value = Float(currentValue)
-        
-        updateTargetLabel ()
-    }
+    
     
     func updateTargetLabel(){
         targetLabel.text = String(targetValue)
@@ -65,7 +60,13 @@ class ViewController: UIViewController {
     }
     
 
-   
+    func startNewRound () {
+        targetValue = 1 + Int(arc4random_uniform(100))
+        currentValue = 50
+        guessingSlider.value = Float(currentValue)
+        
+        updateTargetLabel ()
+    }
     
     //@IBAction func myGuessButtonPressed(_ sender: Any) {
        // let alert = UIAlertController(title: "Hello World!", message: "This is my first alert view", preferredStyle: .alert)
